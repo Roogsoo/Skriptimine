@@ -10,11 +10,10 @@ do
 	# selleks jagame arvu 2-ga ja arvutame jäägi
 	jaak=$(($arv % 2))
 	# juhul, kui jääk on 0, on tegu paarisarvuga
-	if [ $jaak -eq 0]; then
+if [ $jaak -eq 0 ]; then
 	# arvutame summa välja
 	summa=$(($summa + $arv))
-	echo "hetkel summa on $summa"
-	fi # if lause lõppu
+fi # if lause lõppu
 
 done
 echo "arvude 1..10 paarisarvude summa on $summa"
