@@ -1,0 +1,15 @@
+#!/bin/bash
+# 
+# logide sorteerimisskript
+# logifailid sorteeritud kahanevalt
+# vastaavlt ridade arvule
+# s.t. suurema ridade arvuga ette
+#
+# \ - käsu lõikamissümbol
+# saame rakendada siis, kui on vaja pikk käsk jupideks lasta
+# et me korralikult ta näeks
+#
+find /var -type f -a -name "*.log" 2>/dev/null -exec wc -l {} \; \
+| sort -g -r \
+| cut -f2 -d" "
+

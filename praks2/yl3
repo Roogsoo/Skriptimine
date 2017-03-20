@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# hosti tööaja kontrollimine
+#
+echo # tühi rida
+echo -n "Host " # Host ilma reavahetusta
+echo -n `hostname` # valjastame masina nimi  ilma reavahetuseta
+echo -n " is up since " # ilma reavahetuseta
+echo `uptime -s` # kui kaua tööl
+#
+echo -n "This host is up " # ilma reavahetuseta
+uptime | cut -f1 -d"," | cut -f5 -d" " # lõikame välja tööaja
+echo # tühi rida
+

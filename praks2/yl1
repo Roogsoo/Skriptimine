@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# kuupäeva, kellaaja ja kalendri väljastamine
+#
+echo # tühi rida
+date +"Today is %A, %B %d, %Y" # kuupäev
+date +"Time is %H:%M" # kell
+echo # tühi rida
+date +"Calendar of %B %Y"
+cal | tail -n 7
+

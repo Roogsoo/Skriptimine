@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# kasutaja sisendi lugemine
+#
+echo -n "Sisesta oma eesnimi: "
+# muutuja defineerimine ja väärtustamine
+# läbi kasutaja sisendi
+read eesnimi # sisend toimub read käsu kaudu
+#
+echo -n "Sisesta oma perenimi: "
+read perenimi
+# muutuja kasutamine toimub nii, et muutujat
+# kutsuda välja
+echo "Tere tulemast, $eesnimi $perenimi!"
+############################################
+# kasutaja mitmene sisend 
+echo -n "Sisesta: eesnimi perenimi : "
+read eesnimi perenimi
+#
+echo "Tere tulemast, $eesnimi $perenimi!"

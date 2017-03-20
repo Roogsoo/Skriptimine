@@ -1,0 +1,31 @@
+#!/bin/bash
+#
+# küpsise tordi arvutamine
+#
+echo -e  "\t\tKüpsisetordi arvutamisskript"
+echo "============================================================"
+echo
+echo "Sisesta: "
+echo -en "\tkandiku pikkus: "
+read ka_pikkus
+echo -en "\tkandiku laius: "
+read ka_laius
+echo -en "\tkihtide arv: "
+read kihid
+#
+# arvutamine
+#
+ka_pindala=`expr $ka_pikkus \* $ka_laius`
+echo "Kandiku pindala = $ka_pindala"
+ky_pindala=`expr 5 \* 5`
+echo "Küpsise pindala = $ky_pindala"
+ky_kihis=`expr $ka_pindala / $ky_pindala`
+echo "Ühes kihis on $ky_kihis küpsist"
+kokku=`expr $ky_kihis \* $kihid`
+echo "Kokku on vaja $kokku küpsist"
+pakid=`expr $kokku / 20`
+#
+echo "============================================================"
+echo "Kokku läheb vaja $pakid pakki küpsist"  
+
+
