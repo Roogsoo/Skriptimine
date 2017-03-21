@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Väljastab kasutajale menüü ja laseb vastava numbri valida
+# Kristjan Roogsoo IS116
+for ((m=1; m<4; m++))
+do
+	echo `cat menu$m`
+done
+echo "Vali omale meelepärane number (1, 2, 3)"
+read number
+if [ $number -eq 1 ]; then
+echo -e  "Stick to your ribs.\nWatch your cholesterol.\nEnjoy your meal!"
+elif [ $number -eq 2 ]; then
+echo -e "British are coming!\nEnjoy your meal!"
+elif [ $number -eq 3 ]; then
+echo -e "Health foods...\nDieting is so boring.\nEnjoy your meal!"
+else 
+echo "teie sisendile pole vastavat menüü toodet!"
+fi
+
