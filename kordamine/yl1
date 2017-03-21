@@ -14,6 +14,7 @@ else
 		useradd -m -s /bin/bash user$nr
 		parool=$(pwgen 8 1) # genereerib 8 symboliga 1 parooli
 		echo "user$nr:$parool" | chpasswd #määrame kasutajale parooli
+		chage -d 0 user$nr # kasutaja peab esmakordsel logimisel parooli ära vahetama
 		echo "user$nr - $parool" >> users
 done
 fi
