@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Skript tervitab sisselogitud kasutajat ja väljastab kuupäeva
+# Kristjan Roogsoo IS116
+echo "Tere $USER"
+read -p "Vajuta ENTER jätkamiseks"
+date +"Täna on %A, %B %d, %Y"
+date +"Kell on %H:%M"
+date +"Kalendrikuu on %B %Y"
